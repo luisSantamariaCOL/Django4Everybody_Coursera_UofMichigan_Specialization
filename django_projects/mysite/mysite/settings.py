@@ -44,7 +44,11 @@ LOCAL_APPS = [
     'polls.apps.PollsConfig',
 ]
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
+EXTERNAL_APPS = [
+    'django_extensions',
+]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + EXTERNAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
