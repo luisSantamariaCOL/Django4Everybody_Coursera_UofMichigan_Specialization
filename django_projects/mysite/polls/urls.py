@@ -10,8 +10,8 @@ from . import views
 app_name = "polls"
 
 urlpatterns = [
-    path('', views.index, name='index'), # "/polls/"
-    path('detail/<int:question_id>', views.detail, name='detail'), # example: "/polls/2"
-    path('results/<int:question_id>', views.results, name='results'), # example: "/polls/results/2"
+    path('', views.IndexView.as_view(), name='index'), # "/polls/"
+    path('detail/<int:pk>', views.DetailView.as_view(), name='detail'), # example: "/polls/2"
+    path('results/<int:pk>', views.ResultView.as_view(), name='results'), # example: "/polls/results/2"
     path('vote/<int:question_id>', views.vote, name='vote'), # example: "/polls/vote/2"
 ]
